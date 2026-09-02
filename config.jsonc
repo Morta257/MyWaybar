@@ -1,0 +1,110 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 5, // Waybar height (to be removed for auto height)
+    //"width": 1280, // Waybar width
+    "spacing": 2, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/arch",
+        "clock"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+        "memory",
+        "cpu",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "custom/power"
+    ],
+
+    "custom/arch": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+
+    // Modules configuration
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "active-only": false,
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "urgent": ""
+        },
+        "persistent-workspaces": {
+            "*": 1
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M %d.%m.%y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+
+    "memory": {
+        "format": "{}%  "
+    },
+
+    "cpu": {
+        "format": "{usage}% 󰍛"
+    },
+
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󱚼",
+        "tooltip-format": "{essid}\n{ipaddr}",
+        "on-click": "kitty --class menu-network -e ~/.config/waybar/scripts/network.sh"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "tooltip": false,
+        "on-click": "kitty --class menu -e ~/.config/waybar/scripts/bluetooth.sh"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon} ",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "kitty --class menu -e ~/.config/waybar/scripts/power.sh"
+    }
+}

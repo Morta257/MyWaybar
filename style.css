@@ -1,0 +1,83 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: rgba(43, 43, 43, 0.994);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* --- Módulo Personalizado: Arch Menu --- */
+#custom-arch {
+    color: #ffffff;
+    padding: 0 9px 0 9px;
+    font-size: 12px;
+    margin: 0px 3px;
+    border-radius: 100px;
+    border: 1px solid #ffffff;
+    background-color: rgba(44, 41, 47, 0.787);
+}
+
+/* --- Configuración de Workspaces (Hyprland) --- */
+#workspaces {
+    padding: 0px 4px;
+    margin: 0px 3px;
+    border-radius: 100px;
+    border: 1px solid #ffffff;
+    background-color: rgba(44, 41, 47, 0.787);
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0 6px;
+    margin: 0px 2px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #ffffff;
+}
+
+#workspaces button.active {
+    background-color: #000000;
+    border-radius: 100px;
+    border: 1px solid #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+    border: 1px solid #ffffff;
+}
+
+/* --- Estilos Generales de Módulos Activos --- */
+#clock,
+#tray,
+#memory,
+#cpu,
+#pulseaudio,
+#bluetooth,
+#network,
+#custom-power {
+    padding: 0px 10px;
+    margin: 0px 3px;
+    color: #ffffff;
+    border-radius: 100px;
+    border: 1px solid #ffffff;
+    background-color: rgba(44, 41, 47, 0.787);
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
