@@ -41,7 +41,7 @@
             "urgent": ""
         },
         "persistent-workspaces": {
-            "*": 1
+            "*": 3
         }
     },
 
