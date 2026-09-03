@@ -15,10 +15,6 @@ window#waybar {
     color: #ffffff;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
 /* --- Botón menú --- */
 #custom-arch {
     background-color: rgba(44, 41, 47, 0.787);
