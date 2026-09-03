@@ -1,11 +1,16 @@
 // -*- mode: jsonc -*-
+  // ========================================================
+  //   CONFIGURACIÓN DE WAYBAR
+  //   Hecho por: Morta
+  // ========================================================
+
 {
     "layer": "top",
     "position": "top",
     "height": 5, 
     "spacing": 2, 
 
-    // Orden de los módulos
+    /* --- Orden de módulos--- */
     "modules-left": [
         "custom/arch",
         "clock"
@@ -23,7 +28,7 @@
         "custom/power"
     ],
 
-    // Configuración de módulos
+    /* --- Módulos --- */
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
