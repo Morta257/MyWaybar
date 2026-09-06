@@ -1,0 +1,16 @@
+/* ========================================================
+   PALETA DE COLORES DE WAYBAR
+   Hecho por: Morta
+   ======================================================== */
+
+@define-color fondo rgba(15, 23, 42, 0.75);
+@define-color texto-principal #e2e8f0;
+@define-color texto-secundario #94a3b8;
+@define-color borde-suave rgba(255, 255, 255, 0.12);
+@define-color borde-tenue rgba(255, 255, 255, 0.08);
+@define-color modulo-fondo rgba(255, 255, 255, 0.08);
+@define-color modulo-fondo-tenue rgba(255, 255, 255, 0.05);
+@define-color modulo-hover rgba(255, 255, 255, 0.12);
+@define-color acento-principal #89b4fa;
+@define-color texto-acento #0f172a;
+@define-color urgente #f38ba8;

@@ -1,3 +1,5 @@
+@import "colors.css";
+
 /* ========================================================
    ESTILOS DE WAYBAR
    Hecho por: Morta
@@ -12,19 +14,19 @@
 
 /* --- Ajustes waybar --- */
 window#waybar {
-    background-color: rgba(15, 23, 42, 0.75);
-    color: #e2e8f0;
+    background-color: @fondo;
+    color: @texto-principal;
     border-radius: 9999px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid @borde-suave;
     margin: 4px 10px 0px 10px;
 }
 
 /* --- Botón menú --- */
 #custom-arch {
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: @modulo-fondo;
+    border: 1px solid @borde-suave;
     border-radius: 9999px;
-    color: #89b4fa;
+    color: @acento-principal;
     font-size: 11px;
     margin: 2px 3px 2px 8px;
     padding: 0 8px;
@@ -32,8 +34,8 @@ window#waybar {
 
 /* --- Solo workspaces --- */
 #workspaces {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: @modulo-fondo-tenue;
+    border: 1px solid @borde-tenue;
     border-radius: 9999px;
     margin: 2px 3px;
     padding: 1px 3px;
@@ -43,25 +45,25 @@ window#waybar {
     background-color: transparent;
     border: none;
     border-radius: 9999px;
-    color: #94a3b8;
+    color: @texto-secundario;
     margin: 0 1px;
     padding: 0 6px;
     transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: @modulo-hover;
     color: #ffffff;
 }
 
 #workspaces button.active {
-    background-color: #89b4fa;
-    color: #0f172a;
+    background-color: @acento-principal;
+    color: @texto-acento;
 }
 
 #workspaces button.urgent {
-    background-color: #f38ba8;
-    color: #0f172a;
+    background-color: @urgente;
+    color: @texto-acento;
 }
 
 /* --- Estilos generales de módulos --- */
@@ -73,10 +75,10 @@ window#waybar {
 #bluetooth,
 #network,
 #custom-power {
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: @modulo-fondo;
+    border: 1px solid @borde-suave;
     border-radius: 9999px;
-    color: #e2e8f0;
+    color: @texto-principal;
     margin: 2px 3px;
     padding: 0 8px;
 }
@@ -87,5 +89,5 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #f38ba8;
+    background-color: @urgente;
 }
