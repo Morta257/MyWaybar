@@ -16,7 +16,7 @@
 
     /* --- Orden de módulos--- */
     "modules-left": [
-        "custom/arch",
+        "custom/main-menu",
         "clock"
     ],
     "modules-center": [
@@ -34,7 +34,7 @@
 
     /* --- Módulos --- */
 
-    "custom/arch": {
+    "custom/main-menu": {
         "format": "",
         "tooltip": false,
         "on-click": "rofi -show drun"
@@ -71,13 +71,12 @@
     },
 
     "cpu": {
-        "format": "{usage}% 󰍛"
-    },
+        "format": "{usage}% 󰍛",
         "format-icons": {
             "default": "",
             "active": "",
-            "urgent": ""
-        },
+            "urgent": ""}
+    },
 
     "network": {
         "format-wifi": " ",

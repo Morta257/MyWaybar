@@ -22,7 +22,7 @@ window#waybar {
 }
 
 /* --- Botón menú --- */
-#custom-arch {
+#custom-main-menu {
     background-color: @modulo-fondo;
     border: 1px solid @borde-suave;
     border-radius: 9999px;
