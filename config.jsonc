@@ -9,6 +9,11 @@
     "position": "top",
     "height": 5, 
     "spacing": 2, 
+    
+    "margin-top": 2,
+    "margin-bottom": 2,
+    "margin-left": 3,
+    "margin-right": 3,
 
     /* --- Orden de módulos--- */
     "modules-left": [
