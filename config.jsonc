@@ -29,21 +29,8 @@
     ],
 
     /* --- Módulos --- */
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "all-outputs": true,
-        "active-only": false,
-        "format-icons": {
-            "default": "",
-            "active": "",
-            "urgent": ""
-        },
-        "persistent-workspaces": {
-            "*": 3
-        }
-    },
-        "custom/arch": {
+
+    "custom/arch": {
         "format": "",
         "tooltip": false,
         "on-click": "rofi -show drun"
@@ -53,6 +40,22 @@
         "format": "{:%H:%M %d.%m.%y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "hyprland/workspaces": {
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6"},
+        "on-click": "activate",
+        "all-outputs": true,
+        "active-only": false,
+        "persistent-workspaces": {
+            "*": 3
+        }
     },
 
     "tray": {
@@ -66,6 +69,11 @@
     "cpu": {
         "format": "{usage}% 󰍛"
     },
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "urgent": ""
+        },
 
     "network": {
         "format-wifi": " ",
@@ -106,3 +114,5 @@
         "on-click": "kitty --class menu -e ~/.config/waybar/scripts/power.sh"
     }
 }
+
+
