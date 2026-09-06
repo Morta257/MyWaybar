@@ -35,9 +35,9 @@
     /* --- Módulos --- */
 
     "custom/main-menu": {
-        "format": "",
+        "format": "󰍜",
         "tooltip": false,
-        "on-click": "rofi -show drun"
+        "on-click": "kitty --class menu-main -e ~/.config/waybar/scripts/menu.sh"
     },
 
     "clock": {
