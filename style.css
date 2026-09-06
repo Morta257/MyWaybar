@@ -13,6 +13,8 @@
 window#waybar {
     background-color: rgba(43, 43, 43, 0.994);
     color: #ffffff;
+    border-radius: 30px;
+    border: 1px solid rgb(255, 255, 255)
 }
 
 /* --- Botón menú --- */
