@@ -1,72 +1,69 @@
 @import "colors.css";
 
 /* ========================================================
-   ESTILOS DE WAYBAR
+   Waybar
    Hecho por: Morta
    ======================================================== */
 
 /* --- Fuente --- */
 * {
-    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 11px;
+  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
 }
 
 /* --- Ajustes waybar --- */
 window#waybar {
-    background-color: @fondo;
-    color: @texto-principal;
-    border-radius: 9999px;
-    border: 1px solid @borde-suave;
-    margin: 4px 10px 0px 10px;
+  background-color: @fondo;
+  color: @texto-principal;
+  border-radius: 9999px;
+  border: 1px solid alpha(@borde-suave, 0.5);
+  margin: 4px 10px 0px 10px;
 }
 
 /* --- Botón menú --- */
 #custom-main-menu {
-    background-color: @modulo-fondo;
-    border: 1px solid @borde-suave;
-    border-radius: 9999px;
-    color: @acento-principal;
-    font-size: 11px;
-    margin: 2px 3px 2px 8px;
-    padding: 0 8px;
+  background-color: transparent;
+  border: none;
+  color: @acento-principal;
+  font-size: 12px;
+  margin: 2px 2px 2px 10px;
+  padding: 0 6px;
 }
 
-/* --- Solo workspaces --- */
+/* --- Workspaces --- */
 #workspaces {
-    background-color: @modulo-fondo-tenue;
-    border: 1px solid @borde-tenue;
-    border-radius: 9999px;
-    margin: 2px 3px;
-    padding: 1px 3px;
+  background-color: transparent;
+  border: none;
+  margin: 2px 4px;
+  padding: 0 2px;
 }
 
 #workspaces button {
-    background-color: transparent;
-    border: none;
-    border-radius: 9999px;
-    color: @texto-secundario;
-    margin: 0 1px;
-    padding: 0 6px;
-    transition: all 0.2s ease;
+  background-color: transparent;
+  border: none;
+  border-radius: 9999px;
+  color: @texto-secundario;
+  margin: 0 2px;
+  padding: 0 7px;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 #workspaces button:hover {
-    background: @modulo-hover;
-    color: #ffffff;
+  background-color: transparent;
+  color: @acento-principal;
 }
 
 #workspaces button.active {
-    background-color: @acento-principal;
-    color: @texto-acento;
+  background-color: alpha(@acento-principal, 0.15);
+  color: @acento-principal;
 }
 
 #workspaces button.urgent {
-    background-color: @urgente;
-    color: @texto-acento;
+  background-color: alpha(@urgente, 0.2);
+  color: @urgente;
 }
 
-/* --- Estilos generales de módulos --- */
 #clock,
 #tray,
 #memory,
@@ -75,19 +72,42 @@ window#waybar {
 #bluetooth,
 #network,
 #custom-power {
-    background-color: @modulo-fondo;
-    border: 1px solid @borde-suave;
-    border-radius: 9999px;
-    color: @texto-principal;
-    margin: 2px 3px;
-    padding: 0 8px;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid alpha(@borde-tenue, 0.6);
+  border-radius: 0;
+  color: @texto-secundario;
+  margin: 4px 0;
+  padding: 0 10px;
+}
+
+
+#clock {
+  color: @texto-principal;
+  font-weight: bold;
 }
 
 #custom-power {
-    margin-right: 8px;
+  border-right: none;
+  margin-right: 6px;
+  padding-right: 10px;
+  color: @urgente;
+}
+
+#tray {
+  padding-right: 10px;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @urgente;
+  -gtk-icon-effect: highlight;
+  background-color: transparent;
+  color: @urgente;
+}
+
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#cpu:hover,
+#memory:hover {
+  color: @acento-principal;
 }
